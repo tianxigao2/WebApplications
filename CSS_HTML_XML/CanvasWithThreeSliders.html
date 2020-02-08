@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>HTML5 Canvas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+      
+    <body>
+        <div class="example">
+            <canvas id="mycanvas" width="400" height="200" style="border: 2px solid black"></canvas>
+
+            <script type="text/javascript">  
+                function sliders() {  
+                    var red = Number(document.getElementById("r_slider").value);
+                    var green = Number(document.getElementById("g_slider").value);
+                    var blue = Number(document.getElementById("b_slider").value);
+
+                    document.getElementById("rvalue").innerText = red;
+                    document.getElementById("gvalue").innerText = green;
+                    document.getElementById("bvalue").innerText = blue;
+
+                    var redh = (red < 16) ? "0" + red.toString(16) : red.toString(16);
+                    var greenh = (green < 16) ? "0" + green.toString(16) : green.toString(16);
+                    var blueh = (blue < 16) ? "0" + blue.toString(16) : blue.toString(16);
+                    var hex = "#" + redh + greenh + blueh;
+                    
+                    var canvasBgColor = document.getElementById('mycanvas').getContext('2d');
+                    canvasBgColor.fillStyle = hex;
+                    canvasBgColor.fillRect(0, 0, document.getElementById('mycanvas').width, document.getElementById('mycanvas').height);
+                } 
+            </script>
+        </div>
+        
+        <br>
+        <h3 id = "R Slider Representer">R Slider:</h3>
+        <p id = "rvalue"> 100</p>
+        <input  type="range" id="r_slider" value="100" min="0" max="255" onchange="sliders()"/>
+        <br>
+
+        <h3 id = "G Slider Representer">G Slider:</h3>
+        <p id = "gvalue"> 10</p>
+        <input  type="range" id="g_slider" value="10" min="0" max="255" onchange="sliders()"/>
+        <br>
+
+        <h3 id = "B Slider Representer">B Slider:</h3>
+        <p id = "bvalue"> 150</p>
+        <input  type="range" id="b_slider" value="150" min="0" max="255" onchange="sliders()"/>
+        <br>
+
+    </body>
+    
+</html>
