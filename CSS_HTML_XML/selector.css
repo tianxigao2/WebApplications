@@ -1,0 +1,9 @@
+h1 {color: blue;}
+h2 {color: blue;}
+ul a {color: green;}
+table tbody tr:first-child {color: darkviolet;}
+/* if selecting the first column:
+table tbody tr td:first-child */
+#aboutUs p strong {color: orange;}
+label.required {color: red;}
+#twitter {color: cyan;}
