@@ -13,3 +13,9 @@ EE4216: Modern Web Applications
 + Week 3: [Javascript Design](./Javascript_design/)
 
   [1.](./Javascript_design/tic-tac-toe.html) Design an interactive checkboard that the user can act as "x" or "o" user. The one who first connect a row successfully win the game and triggers alerts.
+  
++ Lab 1: [Responsive Web Design](./Responsive_web_design/)
+
+  [1.](./Responsive_web_design/Selector_and_Media_query.html) The template of the website is designed as so. When the size of window is shrinked, the displacement of blocks will change accordingly. When use printing function, some parts of the website will be hidden.
+  
+  [2.](./Responsive_web_design/modal.html) Use modal to display images. Animations of displaying modals are attached.
