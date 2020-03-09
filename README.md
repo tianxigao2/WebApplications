@@ -19,3 +19,5 @@ EE4216: Modern Web Applications
   [1.](./Responsive_web_design/Selector_and_Media_query.html) The template of the website is designed as so. When the size of window is shrinked, the displacement of blocks will change accordingly. When use printing function, some parts of the website will be hidden.
   
   [2.](./Responsive_web_design/modal.html) Use modal to display images. Animations of displaying modals are attached.
+
+  [3.](./Find_Pairs_Memory_Game/index.html) Memory game: click to reveal two cards for once; if the two are the same, leave revealed, or else cover back together. Keep on until every pic is revealed.
