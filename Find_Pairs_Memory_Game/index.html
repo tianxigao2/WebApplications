@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="questionMark.timg.jfif" type="image" rel="shortcut icon" />
+    <script src="game.js"></script>
+    <link rel="stylesheet" type="text/css" href="game.css"/>
+    <title>Lab 1 Assignment: Find All Pairs!</title>
+</head>
+
+<body>
+    <header>Game: to find all pairs!</header>
+
+    <div class="row">
+    
+        <div id="records" class="leftSide">
+            <p> This is the <span id="trial_count"></span> try! </p>
+            <p> Accumulate Score: <span id="score">0</span>.</p>
+            <p> Current Best Record:</p>
+            <ul>
+                <li>min click: <span id="min_click"></span></li>
+                <li>min time (s): <span id="min_time"></span></li>
+            </ul>
+            <p id="click_count_display"> Clicks for this trial: <span id="click_count"></span></p>
+            <p style="color:lightgray;">(Reveal two pictures will be counted as one click.)</p>
+        </div>
+        
+        <div id="box" class="center">
+            <canvas id="canvas0" data-index="0" width="100" height="100"></canvas>
+            <canvas id="canvas1" data-index="1" width="100" height="100"></canvas>
+            <canvas id="canvas2" data-index="2" width="100" height="100"></canvas>
+            <canvas id="canvas3" data-index="3" width="100" height="100"></canvas><br>
+            <canvas id="canvas4" data-index="4" width="100" height="100"></canvas>
+            <canvas id="canvas5" data-index="5" width="100" height="100"></canvas>
+            <canvas id="canvas6" data-index="6" width="100" height="100"></canvas>
+            <canvas id="canvas7" data-index="7" width="100" height="100"></canvas><br>
+            <canvas id="canvas8" data-index="8" width="100" height="100"></canvas>
+            <canvas id="canvas9" data-index="9" width="100" height="100"></canvas>
+            <canvas id="canvas10" data-index="10" width="100" height="100"></canvas>
+            <canvas id="canvas11" data-index="11" width="100" height="100"></canvas>
+        </div>
+
+        <div id="instruction" class="rightSide">
+            Note:
+            <ul>
+                <li>Solve the problem under 10 trials,<br>earns 5 points;</li><br>
+                <li>Solve the problem under 15 trials,<br>earns 4 points;</li><br>
+                <li>Solve the problem under 20 trials,<br>earns 3 points;</li><br>
+                <li>Solve the problem anyhow...,<br>earns 1 point.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer"><h2>
+        Timer: <span id="min">0</span>'<span id="sec">0</span>''
+    </h2></div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal();">&times;</span>
+            <p style="font-size:large;">
+                There are 6 pairs of pictures in total. <br><br>
+                A trial will finish when you reveal all pairs of the pictures.<br><br>
+                The score will be accumulated through trials.<br><br>
+                <span style="color:lightslategrey; font-size:small;">(This block will automatically disappear in 10 sec ...)</span><br><br>
+                <span style="color:black; font-weight: bold; font-size:x-large;">GOOD LUCK!</span>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
