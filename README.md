@@ -26,4 +26,4 @@ EE4216: Modern Web Applications
 
   [1.](./Web_scrapper/ExecutorServiceRetreaver.java) Use Jsoup lib to fetch data from a sequence of webpages simultaneously with a thread pool.
   
-  [2.](./Web_scrapper/AutoUpdatingRankList.java) Fetch data from webpages and store the data in local DB. Use servlet programs to extract data from the DB and post information by auto-generating html files.
+  [2.](./Web_scrapper/PostServlet.java) Fetch data from webpages and store the data in local DB. Use servlet programs to extract data from the DB and post information by auto-generating html files.*To execute, go to the index.html page. All things will be generated automatically.*
