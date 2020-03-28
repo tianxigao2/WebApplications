@@ -21,3 +21,9 @@ EE4216: Modern Web Applications
   [2.](./Responsive_web_design/modal.html) Use modal to display images. Animations of displaying modals are attached.
 
   [3.](./Find_Pairs_Memory_Game/index.html) Memory game: click to reveal two cards for once; if the two are the same, leave revealed, or else cover back together. Keep on until every pic is revealed.
+
++ Lab 2: [Scrap Data From Website with Java](./Web_scrapper)
+
+  [1.](./Web_scrapper/ExecutorServiceRetreaver.java) Use Jsoup lib to fetch data from a sequence of webpages simultaneously with a thread pool.
+  
+  [2.](./Web_scrapper/AutoUpdatingRankList.java) Fetch data from webpages and store the data in local DB. Use servlet programs to extract data from the DB and post information by auto-generating html files.
