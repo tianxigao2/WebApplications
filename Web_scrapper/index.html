@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Best Sellers</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        Amazon Best Sellers (Top 100)</br>
+    </header>
+
+    <div class='row'>    
+        <!-- main body -->
+            <form action='/54774324/PostServlet' method='POST' class='center'>
+                <input type='submit' value='Load the List' class='close'>
+            </form>
+
+    </div>
+
+    <div class='footer'><h2>
+        Go to <a href='https://www.amazon.com/gp/bestsellers/books/' style="text-decoration: none;">Amazon</a> to find more!
+    </h2></div>
+
+    <div id='myModal' class='modal'>
+        <div class='modal-content'>
+            <span class='close' onclick='closeModal();'>&times;</span>
+            <p style='font-size:large;'>
+                This page will display the Amazon best sellers, the list updated hourly.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function closeModal(){
+            document.getElementById('myModal').style.display='none';
+        }
+    </script>
+</body>
+
+</html>
