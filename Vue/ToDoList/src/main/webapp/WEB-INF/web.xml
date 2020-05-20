@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoadPreviousMission</servlet-name>
+        <servlet-class>ee4216.sid54774324.lab3assignment.LoadPreviousMission</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCurrentMissionToDB</servlet-name>
+        <servlet-class>ee4216.sid54774324.lab3assignment.UpdateCurrentMissionToDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>ee4216.sid54774324.lab3assignment.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Authentication</servlet-name>
+        <servlet-class>ee4216.sid54774324.lab3assignment.Authentication</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadPreviousMission</servlet-name>
+        <url-pattern>/missions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCurrentMissionToDB</servlet-name>
+        <url-pattern>/UpdateCurrentMissionToDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/deleteAll</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Authentication</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

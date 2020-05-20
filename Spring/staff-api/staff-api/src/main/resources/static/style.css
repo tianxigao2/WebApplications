@@ -1,0 +1,64 @@
+*{
+    box-sizing: content-box;
+    text-align: center;
+    margin:0;
+}
+
+.staff-blog{
+    display: flex;
+    border: 2px solid grey;
+}
+.staff-blog .left{
+    flex: 40%;
+    background-color: rgb(200, 128, 128);
+}
+.staff-blog .left a{
+    color: white;
+    text-decoration: none;
+}
+.staff-blog .left .details{
+    display: flex;
+}
+.staff-blog .left .details .status, .staff-blog .left .details .star{
+    padding: 20px 10px;
+    flex:50%;
+}
+.staff-blog .right{
+    flex: 55%;
+    padding: 20px 20px;
+    background-color: rgb(200, 100, 100);
+}
+.staff-blog .right .details{
+    display: flex;
+    background-color: rgb(150, 50, 50);
+}
+.staff-blog .right .details .contact, .staff-blog .details .address{
+    flex: 50%;
+    padding: 10px 10px;
+}
+.staff-blog .close{
+    flex: 5%;
+    background-color: rgb(200,128,128);
+    color:grey;
+    font-size: larger;
+}
+.staff-blog .close:hover{
+    cursor: pointer;
+    background-color: rgb(200,100,100);
+    color:white;
+}
+.header{
+    background-color: bisque;
+    padding: 20px;
+}
+.no-display{
+    display:none;
+}
+.invisible{
+    visibility:hidden;
+}
+.editable:hover{
+    cursor: pointer;
+    color:white;
+    font-weight: bolder;
+}

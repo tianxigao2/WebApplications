@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Do List</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+
+    <link rel='stylesheet' type='text/css' href="ToDoList.css"/>
+    <link rel='stylesheet' href="Lib/font-awesome/css/font-awesome.min.css"/>
+</head>
+
+<body>
+
+    <header>
+        <div>
+        To Do List
+        </div>
+        
+        <div>
+            <br/><i class="fa fa-lock fa-fw"></i>
+            <span>Password: <input id="pwd" type="password"/><input type="submit" class="editable" value="Login" id="pwdBtn"></span>
+        </div>
+    </header>
+
+    <div id='app'>
+        <nav>
+            <button id="status">Hide Completed Events</button>
+            <button id="deleteAll">Delete All</button>
+        </nav>
+
+        <event-container
+            v-for="event in eventsSort" 
+            :key="event.title" 
+            :basic-event="event"
+            :star-class="starClass(event)"
+            :status-class="statusClass(event)" 
+            :content-box-class="contentBoxClass(event)"
+            @delete-event="deleteEvent(event)"
+            @toggle-star="toggleStar(event)"
+            @toggle-status="toggleStatus(event)"
+            @edit-deadline="editDeadline(event)"
+        >
+        </event-container>
+
+        <div id='myModal' class='modal'>
+            <div class="modal-content">
+                <span class="close" onclick="closeModal();">
+                    &times;
+                </span>
+                <p>
+                    Edit Event Details:<br/></br>
+                    <i class='fa fa-clock-o fa-fw'></i>
+                    Deadline: 
+                    <input id='ddl_modified' type='datetime-local'>
+                    <br/><br/>
+                    <button id="confirm" class='center'> Confirm </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class='left-0-right-30 center'>
+            <i class="fa fa-pencil fa-fw"></i>Enter new issue:
+        </div>
+
+        <div class='left-30-right-100'>
+            <i class='fa fa-clock-o fa-fw'></i>Deadline: <input id='ddl' type='datetime-local'><br/><br/>
+            <i class='fa fa-file-text-o fa-fw'></i>Title: <input id='EvtTitle' type="text"><br/>
+            <br/>
+            <button id="newEvent" class='center'>Enter</button>
+        </div>
+    </footer>
+</body>
+
+<script src="ToDoList.js"></script>
+
+</html>

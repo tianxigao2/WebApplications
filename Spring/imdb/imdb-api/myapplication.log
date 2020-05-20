@@ -1,0 +1,697 @@
+2020-05-17 21:02:10.713  INFO 14544 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Starting ImdbApiApplicationTests on LAPTOP-MBB3ENMF with PID 14544 (started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:02:10.727  INFO 14544 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : No active profile set, falling back to default profiles: default
+2020-05-17 21:02:12.185  INFO 14544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:02:12.292  INFO 14544 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:02:12.677  INFO 14544 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Started ImdbApiApplicationTests in 2.234 seconds (JVM running for 3.258)
+2020-05-17 21:02:12.688  INFO 14544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:02:15.959 ERROR 14544 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.2.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at ee4216.lab4.imdbapi.MovieController.run(MovieController.java:42) [classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126) [spring-boot-test-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_191]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_191]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	... 86 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_191]
+	at javax.net.DefaultSocketFactory.createSocket(SocketFactory.java:271) ~[na:1.8.0_191]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_191]
+	... 91 common frames omitted
+
+2020-05-17 21:02:15.963  INFO 14544 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-17 21:02:15.969 ERROR 14544 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126) [spring-boot-test-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_191]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_191]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at ee4216.lab4.imdbapi.MovieController.run(MovieController.java:42) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 70 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.2.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 75 common frames omitted
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	... 86 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_191]
+	at javax.net.DefaultSocketFactory.createSocket(SocketFactory.java:271) ~[na:1.8.0_191]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_191]
+	... 91 common frames omitted
+
+2020-05-17 21:02:15.974  INFO 14544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:02:15.978 ERROR 14544 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@791f145a] to prepare test instance [ee4216.lab4.imdbapi.ImdbApiApplicationTests@6fa69af7]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_191]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_191]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_191]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_191]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_191]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_191]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_191]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126) ~[spring-boot-test-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 65 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at ee4216.lab4.imdbapi.MovieController.run(MovieController.java:42) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 70 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.2.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 75 common frames omitted
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	... 86 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_191]
+	at javax.net.DefaultSocketFactory.createSocket(SocketFactory.java:271) ~[na:1.8.0_191]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_191]
+	... 91 common frames omitted
+
+2020-05-17 21:03:21.238  INFO 13108 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Starting ImdbApiApplicationTests on LAPTOP-MBB3ENMF with PID 13108 (started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:03:21.240  INFO 13108 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : No active profile set, falling back to default profiles: default
+2020-05-17 21:03:22.650  INFO 13108 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:03:22.769  INFO 13108 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:03:22.991  INFO 13108 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Started ImdbApiApplicationTests in 2.0 seconds (JVM running for 2.916)
+2020-05-17 21:03:22.997  INFO 13108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:03:23.254  INFO 13108 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 21:03:23.289  INFO 13108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 21:03:23.601  INFO 13108 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:03:23.638  INFO 13108 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 21:03:23.645  INFO 13108 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 21:30:35.580  INFO 3096 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication v0.0.1-SNAPSHOT on LAPTOP-MBB3ENMF with PID 3096 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\imdb-api-0.0.1-SNAPSHOT.jar started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:30:35.584  INFO 3096 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 21:30:37.039  INFO 3096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 21:30:37.056  INFO 3096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 21:30:37.056  INFO 3096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 21:30:37.295  INFO 3096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 21:30:37.295  INFO 3096 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1655 ms
+2020-05-17 21:30:37.587  INFO 3096 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:30:37.666  INFO 3096 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:30:37.791  INFO 3096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 21:30:37.794  INFO 3096 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 2.665 seconds (JVM running for 3.359)
+2020-05-17 21:30:37.800  INFO 3096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:30:38.064  INFO 3096 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 21:30:38.091  INFO 3096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 21:32:23.036  INFO 3096 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 21:32:35.560  INFO 3096 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 21:32:35.578  INFO 3096 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-17 21:32:39.080  INFO 3096 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:32:39.082  INFO 3096 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 21:32:39.087  INFO 3096 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 21:32:55.135  INFO 8828 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Starting ImdbApiApplicationTests on LAPTOP-MBB3ENMF with PID 8828 (started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:32:55.137  INFO 8828 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : No active profile set, falling back to default profiles: default
+2020-05-17 21:32:56.550  INFO 8828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:32:56.673  INFO 8828 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:32:56.925  INFO 8828 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Started ImdbApiApplicationTests in 2.034 seconds (JVM running for 2.925)
+2020-05-17 21:32:56.931  INFO 8828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:32:57.142  INFO 8828 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 21:32:57.167  INFO 8828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 21:32:57.408  INFO 8828 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:32:57.409  INFO 8828 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 21:32:57.414  INFO 8828 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 21:33:12.000  INFO 15084 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 15084 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:33:12.002  INFO 15084 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 21:33:12.053  INFO 15084 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Jane G\.m2\repository\org\apache\derby\derbyclient\10.14.2.0\derbyclient-10.14.2.0.jar referenced one or more files that do not exist: file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_cs.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_de_DE.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_es.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_fr.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_hu.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_it.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ja_JP.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ko_KR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pl.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pt_BR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ru.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_CN.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_TW.jar
+2020-05-17 21:33:12.053  INFO 15084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-17 21:33:12.053  INFO 15084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-17 21:33:13.583  INFO 15084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 21:33:13.594  INFO 15084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 21:33:13.595  INFO 15084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 21:33:13.667  INFO 15084 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 21:33:13.667  INFO 15084 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1614 ms
+2020-05-17 21:33:13.947  INFO 15084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:33:14.025  INFO 15084 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:33:14.129  INFO 15084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 21:33:14.188  INFO 15084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 21:33:14.191  INFO 15084 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 2.645 seconds (JVM running for 3.072)
+2020-05-17 21:33:14.198  INFO 15084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:33:14.373  INFO 15084 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 21:33:14.403  INFO 15084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 21:35:06.146  INFO 15084 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 21:35:06.146  INFO 15084 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 21:35:06.156  INFO 15084 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-05-17 21:35:50.792  INFO 14204 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication v0.0.1-SNAPSHOT on LAPTOP-MBB3ENMF with PID 14204 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\imdb-api-0.0.1-SNAPSHOT.jar started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 21:35:50.795  INFO 14204 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 21:35:52.115  INFO 14204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 21:35:52.125  INFO 14204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 21:35:52.126  INFO 14204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 21:35:52.191  INFO 14204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 21:35:52.192  INFO 14204 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1352 ms
+2020-05-17 21:35:52.433  INFO 14204 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:35:52.520  INFO 14204 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 21:35:52.635  INFO 14204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 21:35:52.638  INFO 14204 --- [main] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 2.229 seconds (JVM running for 2.652)
+2020-05-17 21:35:52.643  INFO 14204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 21:35:52.850  INFO 14204 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 21:35:52.869  INFO 14204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 21:36:05.500  INFO 14204 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 21:36:05.501  INFO 14204 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 21:36:05.511  INFO 14204 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-05-17 21:38:07.258  INFO 14204 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 21:38:07.260  INFO 14204 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 21:38:07.265  INFO 14204 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 23:32:40.592  INFO 9508 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Starting ImdbApiApplicationTests on LAPTOP-MBB3ENMF with PID 9508 (started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:32:40.623  INFO 9508 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : No active profile set, falling back to default profiles: default
+2020-05-17 23:32:42.620  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:32:42.620  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:32:42.713  INFO 3412 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Jane G\.m2\repository\org\apache\derby\derbyclient\10.14.2.0\derbyclient-10.14.2.0.jar referenced one or more files that do not exist: file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_cs.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_de_DE.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_es.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_fr.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_hu.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_it.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ja_JP.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ko_KR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pl.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pt_BR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ru.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_CN.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_TW.jar
+2020-05-17 23:32:42.713  INFO 3412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-17 23:32:42.713  INFO 3412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-17 23:32:43.041  INFO 9508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:32:43.322  INFO 9508 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:32:43.824  INFO 9508 --- [main] e.lab4.imdbapi.ImdbApiApplicationTests   : Started ImdbApiApplicationTests in 3.782 seconds (JVM running for 5.68)
+2020-05-17 23:32:43.840  INFO 9508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 23:32:44.277  INFO 9508 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:32:44.309  INFO 9508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 23:32:44.809  INFO 9508 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:32:44.824  INFO 9508 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 23:32:44.824  INFO 9508 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 23:32:45.152  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:32:45.168  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:32:45.168  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:32:45.230  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:32:45.230  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2517 ms
+2020-05-17 23:32:45.621  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:32:45.761  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:32:46.011  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:32:46.074  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:32:46.074  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 4.024 seconds (JVM running for 4.615)
+2020-05-17 23:32:46.089  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-17 23:32:46.433  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:32:46.480  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-17 23:32:49.493  INFO 3412 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:32:49.493  INFO 3412 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-17 23:32:49.508  INFO 3412 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-17 23:32:49.925  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:32:49.925  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:32:50.175  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:32:50.175  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:32:50.175  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:32:50.206  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:32:50.206  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 281 ms
+2020-05-17 23:32:50.268  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:32:50.284  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:32:50.331  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:32:50.346  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:32:50.346  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.457 seconds (JVM running for 8.883)
+2020-05-17 23:32:50.346  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-17 23:32:50.346  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:32:50.346  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-17 23:32:50.362  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:33:07.806  INFO 3412 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 23:33:07.806  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 23:33:07.822  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-17 23:33:08.915  INFO 3412 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:08.915  INFO 3412 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-05-17 23:33:08.915  INFO 3412 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-05-17 23:33:09.610  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:33:09.610  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:33:09.895  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:33:09.895  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:33:09.895  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:33:09.911  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:33:09.911  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 285 ms
+2020-05-17 23:33:09.974  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:09.996  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:33:10.027  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:33:10.027  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:33:10.027  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.442 seconds (JVM running for 28.57)
+2020-05-17 23:33:10.027  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-05-17 23:33:10.043  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:33:10.043  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-05-17 23:33:10.043  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:33:10.816  INFO 3412 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 23:33:10.816  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 23:33:10.816  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2020-05-17 23:33:18.535  INFO 3412 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:18.535  INFO 3412 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-05-17 23:33:18.551  INFO 3412 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-05-17 23:33:19.126  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:33:19.126  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:33:19.602  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:33:19.602  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:33:19.602  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:33:19.622  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:33:19.622  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 496 ms
+2020-05-17 23:33:19.703  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:19.716  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:33:19.744  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:33:19.754  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:33:19.754  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.674 seconds (JVM running for 38.287)
+2020-05-17 23:33:19.754  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-05-17 23:33:19.762  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:33:19.764  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-05-17 23:33:19.772  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:33:35.277  INFO 3412 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:35.277  INFO 3412 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-05-17 23:33:35.277  INFO 3412 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-05-17 23:33:35.773  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:33:35.773  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:33:35.973  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:33:35.973  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:33:35.973  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:33:36.004  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:33:36.004  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 231 ms
+2020-05-17 23:33:36.069  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:33:36.079  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:33:36.109  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:33:36.119  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:33:36.119  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.363 seconds (JVM running for 54.653)
+2020-05-17 23:33:36.119  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-05-17 23:33:36.119  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:33:36.127  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-05-17 23:33:36.130  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:33:40.612  INFO 3412 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 23:33:40.612  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-17 23:33:40.627  INFO 3412 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-05-17 23:35:57.311  INFO 3412 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:35:57.311  INFO 3412 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-05-17 23:35:57.311  INFO 3412 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-05-17 23:35:57.844  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:35:57.844  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:35:58.237  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:35:58.237  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:35:58.237  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:35:58.257  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:35:58.257  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 413 ms
+2020-05-17 23:35:58.439  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:35:58.449  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:35:58.500  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:35:58.530  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:35:58.530  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.719 seconds (JVM running for 197.064)
+2020-05-17 23:35:58.530  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-05-17 23:35:58.540  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:35:58.540  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-05-17 23:35:58.560  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:36:16.057  INFO 3412 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:16.057  INFO 3412 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-05-17 23:36:16.057  INFO 3412 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-05-17 23:36:16.431  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:36:16.431  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:36:16.594  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:36:16.594  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:36:16.594  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:36:16.609  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:36:16.609  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 178 ms
+2020-05-17 23:36:16.647  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:16.647  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:36:16.663  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.265 seconds (JVM running for 215.211)
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-05-17 23:36:16.678  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:36:46.398  INFO 3412 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:46.398  INFO 3412 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2020-05-17 23:36:46.398  INFO 3412 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2020-05-17 23:36:46.866  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:36:46.866  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:36:47.085  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:36:47.085  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:36:47.085  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:36:47.101  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:36:47.101  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 235 ms
+2020-05-17 23:36:47.147  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:47.147  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:36:47.179  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:36:47.179  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:36:47.179  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.336 seconds (JVM running for 245.724)
+2020-05-17 23:36:47.179  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2020-05-17 23:36:47.194  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-8 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:36:47.194  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2020-05-17 23:36:47.194  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:36:47.752  INFO 11416 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 11416 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:36:47.752  INFO 11416 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:36:47.799  INFO 11416 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Jane G\.m2\repository\org\apache\derby\derbyclient\10.14.2.0\derbyclient-10.14.2.0.jar referenced one or more files that do not exist: file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_cs.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_de_DE.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_es.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_fr.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_hu.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_it.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ja_JP.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ko_KR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pl.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_pt_BR.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_ru.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_CN.jar,file:/C:/Users/Jane%20G/.m2/repository/org/apache/derby/derbyclient/10.14.2.0/derbyLocale_zh_TW.jar
+2020-05-17 23:36:47.799  INFO 11416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-17 23:36:47.799  INFO 11416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-17 23:36:49.220  INFO 11416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:36:49.220  INFO 11416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:36:49.220  INFO 11416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:36:49.298  INFO 11416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:36:49.298  INFO 11416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1499 ms
+2020-05-17 23:36:49.564  INFO 11416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:49.642  INFO 11416 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:36:49.736  WARN 11416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-17 23:36:49.767  INFO 11416 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-17 23:36:49.767  INFO 11416 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-17 23:36:49.767 ERROR 11416 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+
+2020-05-17 23:36:49.783  INFO 11416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:51.637  INFO 3412 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:51.637  INFO 3412 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2020-05-17 23:36:51.637  INFO 3412 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2020-05-17 23:36:51.997  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:36:51.997  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:36:52.184  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:36:52.184  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:36:52.184  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:36:52.200  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:36:52.231  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 234 ms
+2020-05-17 23:36:52.278  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:36:52.278  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:36:52.309  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:36:52.309  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:36:52.309  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.339 seconds (JVM running for 250.851)
+2020-05-17 23:36:52.309  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2020-05-17 23:36:52.309  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-9 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:36:52.325  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2020-05-17 23:36:52.325  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-17 23:37:01.860  INFO 3412 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:37:01.860  INFO 3412 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2020-05-17 23:37:01.860  INFO 3412 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2020-05-17 23:37:02.195  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Starting ImdbApiApplication on LAPTOP-MBB3ENMF with PID 3412 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api\target\classes started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Lab4 Restful API Design\Lab4\imdb-api\imdb-api)
+2020-05-17 23:37:02.195  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : No active profile set, falling back to default profiles: default
+2020-05-17 23:37:02.351  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-17 23:37:02.351  INFO 3412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-17 23:37:02.351  INFO 3412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-17 23:37:02.367  INFO 3412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-17 23:37:02.367  INFO 3412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 156 ms
+2020-05-17 23:37:02.414  INFO 3412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 23:37:02.414  INFO 3412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] ee4216.lab4.imdbapi.ImdbApiApplication   : Started ImdbApiApplication in 0.263 seconds (JVM running for 260.985)
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-10 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-17 23:37:02.445  INFO 3412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2020-05-17 23:37:02.461  INFO 3412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

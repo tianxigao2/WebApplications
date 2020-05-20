@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Table</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css"/>
+</head>
+
+<body>
+    <div id="table">
+        <table>
+            <tr>
+                <th>
+                    <div class="flex-container clickable" @click="triggerId">
+                        <span class="title" v-html="table_header.id"></span>
+                        <span :class="id_class"></span>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex-container clickable" @click="triggerName">
+                        <span class="title" v-html="table_header.name"></span>
+                        <span :class="name_class"></span>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex-container clickable" @click="triggerYear">
+                        <span class="title" v-html="table_header.year"></span>
+                        <span :class="year_class"></span>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex-container clickable" @click="triggerRank">
+                        <span class="title" v-html="table_header.rank"></span>
+                        <span :class="rank_class"></span>
+                    </div>
+                </th>
+                <!-- end of header -->
+            </tr>
+            <tr v-for="movie in movies">
+                <!-- content -->
+                <td v-html="movie.id"></td>
+                <td v-html="movie.name"></td>
+                <td v-html="movie.year"></td>
+                <td v-html="movie.rank"></td>
+                <!-- end of content -->
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="table.js"></script>
+</html>

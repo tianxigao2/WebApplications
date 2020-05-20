@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Staff List Scraper</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="header">
+            Account:<input id="account" type="text" name="account"/><br/><br/>
+            Password:<input id="password" type="password" name="password"/><br/><br/>
+            <div id="error-info"></div>
+            <input id="signup" type="button" value="SIGN UP" class="editable"/>
+            <input id="signin" type="button" value="SIGN IN" class="editable"/><br/>
+        </div>
+        <div id="app">
+            <div :class="certification?'':'no-display'">
+                <form class="header">
+                    Search Staff by:
+                    <input type="text" name="searchKey" v-model="keyValue"/>
+                    (Case Insensitive)
+                </form>
+
+                <staff-blog 
+                    v-for="mstaff in searchedStaff"
+                    :key="mstaff.name"
+                    :staff="mstaff"
+                    @toggle-status="toggleStatus(mstaff)"
+                    @toggle-star="toggleStar(mstaff)"
+                    @delete-staff="deleteStaff"
+                >
+                </staff-blog>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

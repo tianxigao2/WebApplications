@@ -1,0 +1,171 @@
+2020-05-19 00:00:58.839  INFO 12280 --- [main] e.test.staffapi.StaffApiApplication      : Starting StaffApiApplication v0.0.1-SNAPSHOT on LAPTOP-MBB3ENMF with PID 12280 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api\target\staff-api-0.0.1-SNAPSHOT.jar started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api)
+2020-05-19 00:00:58.854  INFO 12280 --- [main] e.test.staffapi.StaffApiApplication      : No active profile set, falling back to default profiles: default
+2020-05-19 00:01:00.932  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-19 00:01:00.963  INFO 12280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 00:01:00.963  INFO 12280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-05-19 00:01:01.104  INFO 12280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-19 00:01:01.104  INFO 12280 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2156 ms
+2020-05-19 00:01:01.510  INFO 12280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 00:01:01.619  INFO 12280 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-19 00:01:01.776  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-19 00:01:01.791  INFO 12280 --- [main] e.test.staffapi.StaffApiApplication      : Started StaffApiApplication in 3.557 seconds (JVM running for 4.092)
+2020-05-19 00:01:01.791  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 00:01:02.057  INFO 12280 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-19 00:01:02.072  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-19 00:01:31.709  INFO 12280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-19 00:01:31.709  INFO 12280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-19 00:01:31.725  INFO 12280 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-19 00:03:41.915  INFO 9120 --- [main] e.test.staffapi.StaffApiApplication      : Starting StaffApiApplication v0.0.1-SNAPSHOT on LAPTOP-MBB3ENMF with PID 9120 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api\target\staff-api-0.0.1-SNAPSHOT.jar started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api)
+2020-05-19 00:03:41.915  INFO 9120 --- [main] e.test.staffapi.StaffApiApplication      : No active profile set, falling back to default profiles: default
+2020-05-19 00:03:43.842  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-19 00:03:43.858  INFO 9120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 00:03:43.858  INFO 9120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-05-19 00:03:43.952  INFO 9120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-19 00:03:43.952  INFO 9120 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1943 ms
+2020-05-19 00:03:44.342  INFO 9120 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 00:03:44.452  INFO 9120 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-19 00:03:44.608  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-19 00:03:44.608  INFO 9120 --- [main] e.test.staffapi.StaffApiApplication      : Started StaffApiApplication in 3.286 seconds (JVM running for 3.802)
+2020-05-19 00:03:44.623  INFO 9120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 00:03:44.827  INFO 9120 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (功能未实施：getNetworkTimeout。)
+2020-05-19 00:03:44.858  INFO 9120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-19 08:47:33.551  INFO 17724 --- [main] e.test.staffapi.StaffApiApplication      : Starting StaffApiApplication v0.0.1-SNAPSHOT on LAPTOP-MBB3ENMF with PID 17724 (E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api\target\staff-api-0.0.1-SNAPSHOT.jar started by Jane G in E:\OneDrive - City University of Hong Kong\CityU_Data and File\Y4 semB\Web Application\Final\Practice\staff-api\staff-api)
+2020-05-19 08:47:33.551  INFO 17724 --- [main] e.test.staffapi.StaffApiApplication      : No active profile set, falling back to default profiles: default
+2020-05-19 08:47:35.540  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-05-19 08:47:35.561  INFO 17724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-19 08:47:35.561  INFO 17724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-05-19 08:47:35.691  INFO 17724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-19 08:47:35.691  INFO 17724 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2040 ms
+2020-05-19 08:47:36.093  INFO 17724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-19 08:47:36.186  INFO 17724 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-05-19 08:47:36.339  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-05-19 08:47:36.346  INFO 17724 --- [main] e.test.staffapi.StaffApiApplication      : Started StaffApiApplication in 3.407 seconds (JVM running for 3.931)
+2020-05-19 08:47:36.356  INFO 17724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-19 08:47:39.617 ERROR 17724 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.3.jar!/:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462) [spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at ee4216.test.staffapi.DispController.run(DispController.java:34) [classes!/:0.0.1-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at ee4216.test.staffapi.StaffApiApplication.main(StaffApiApplication.java:9) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	... 29 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_191]
+	at javax.net.DefaultSocketFactory.createSocket(Unknown Source) ~[na:1.8.0_191]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_191]
+	... 34 common frames omitted
+
+2020-05-19 08:47:39.617  INFO 17724 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-19 08:47:39.632 ERROR 17724 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at ee4216.test.staffapi.StaffApiApplication.main(StaffApiApplication.java:9) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) [staff-api-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at ee4216.test.staffapi.DispController.run(DispController.java:34) ~[classes!/:0.0.1-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) [spring-boot-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 13 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.3.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.3.jar!/:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.6.RELEASE.jar!/:5.2.6.RELEASE]
+	... 18 common frames omitted
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException：连接到端口 1,527 上的服务器 localhost 时出错，消息为 Connection refused: connect。
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	... 29 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_191]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_191]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_191]
+	at javax.net.DefaultSocketFactory.createSocket(Unknown Source) ~[na:1.8.0_191]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source) ~[derbyclient-10.14.2.0.jar!/:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_191]
+	... 34 common frames omitted
+
+2020-05-19 08:47:39.632  INFO 17724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
