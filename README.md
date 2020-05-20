@@ -27,3 +27,21 @@ EE4216: Modern Web Applications
   [1.](./Web_scrapper/ExecutorServiceRetreaver.java) Use Jsoup lib to fetch data from a sequence of webpages simultaneously with a thread pool.
   
   [2.](./Web_scrapper/PostServlet.java) Fetch data from webpages and store the data in local DB. Use servlet programs to extract data from the DB and post information by auto-generating html files.*To execute, go to the index.html page. All things will be generated automatically.*
+
++ Lab 3: [Vue.js](./Vue)
+
+  [1.](https://codepen.io/tianxigao2/pen/oNXMrey) Use the Vue.js Framework to design a responsible client side application.
+  
+  [2.](./Vue/ToDoList) Design a To Do List application. All the work are synchronized between the frontend and the backend. The functionality of the app includes:
+    + Create/ Delete Item
+    + List pending items or completed items
+    + Change item status to "pending"/"completed"
+    + Edit the list
+    + Star items
+    + Password Authentification
+    
++ Lab 4: [Springboot and RESTful API](./Spring)
+
+  [1.](./Spring/imdb) Using Springboot to easily handle the frontend-backend interaction in Lab3.
+  
+  [2.](./Spring/staff-api) Scrap data from CityU staff page, interact with local DB by JDBCTemplate, communicate with front end using Springboot.
